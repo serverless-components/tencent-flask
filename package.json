@@ -1,0 +1,68 @@
+{
+  "name": "@serverless/tencent-flask",
+  "description": "Tencent Cloud Flask Serverless Component",
+  "version": "0.0.0",
+  "main": "serverless.js",
+  "publishConfig": {
+    "access": "public"
+  },
+  "keywords": [
+    "flask",
+    "serverless",
+    "serverless-component",
+    "serverlesscomponent",
+    "tencent"
+  ],
+  "scripts": {
+    "commitlint": "commitlint -f HEAD@{15}",
+    "lint": "eslint --ext .js,.ts,.tsx .",
+    "lint:fix": "eslint --fix --ext .js,.ts,.tsx .",
+    "prettier": "prettier --check **/*.{css,html,js,json,md,yaml,yml}",
+    "prettier:fix": "prettier --write **/*.{css,html,js,json,md,yaml,yml}",
+    "prepare-release": "standard-version && prettier --write CHANGELOG.md"
+  },
+  "author": "Tencent Cloud, Inc.",
+  "license": "Apache",
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged",
+      "commit-msg": "commitlint -E HUSKY_GIT_PARAMS"
+    }
+  },
+  "lint-staged": {
+    "**/*.*": [
+      "eslint --fix --ext .js,.ts,.tsx .",
+      "git add"
+    ],
+    "**/*.{css,html,js,json,md,yaml,yml}": [
+      "prettier -c",
+      "git add"
+    ]
+  },
+  "standard-version": {
+    "skip": {
+      "commit": true,
+      "tag": true
+    }
+  },
+  "dependencies": {
+    "@serverless/core": "^1.0.0",
+    "@serverless/tencent-apigateway": "^1.2.0",
+    "@serverless/tencent-scf": "^1.1.0",
+    "@yugasun/python-requirements": "^0.1.1"
+  },
+  "devDependencies": {
+    "@commitlint/cli": "^8.2.0",
+    "@commitlint/config-conventional": "^8.2.0",
+    "babel-eslint": "9.0.0",
+    "eslint": "5.6.0",
+    "eslint-config-prettier": "^3.6.0",
+    "eslint-plugin-import": "^2.14.0",
+    "eslint-plugin-prettier": "^3.0.1",
+    "github-release-from-cc-changelog": "^2.2.0",
+    "husky": "^3.1.0",
+    "lint-staged": "^9.5.0",
+    "prettier": "^1.15.3",
+    "standard-version": "^7.0.1"
+  }
+}
