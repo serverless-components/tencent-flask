@@ -48,7 +48,7 @@ MyComponent:
   inputs:
     region: ap-guangzhou 
     functionName: flask-function
-    codeUri: ./
+    code: ./
     functionConf:
       timeout: 10
       memorySize: 128

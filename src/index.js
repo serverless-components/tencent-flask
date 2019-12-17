@@ -1,3 +1,7 @@
+const ensureIterable = require('type/iterable/ensure')
+const ensurePlainObject = require('type/plain-object/ensure')
+const ensureString = require('type/string/ensure')
+const random = require('ext/string/random')
 const path = require('path')
 const { Component, utils } = require('@serverless/core')
 
@@ -8,32 +12,40 @@ const DEFAULTS = {
 }
 
 class TencentFlask extends Component {
+  getDefaultProtocol(protocols) {
+    if (protocols.map((i) => i.toLowerCase()).includes('https')) {
+      return 'https'
+    }
+    return 'http'
+  }
+
   /**
    * prepare create function inputs
    * @param {object} inputs inputs
    */
   async prepareInputs(inputs = {}) {
-    const len = 6
-    const chars = 'ABCDEFGHJKMNPQRSTWXYZabcdefhijkmnprstwxyz2345678'
-    const maxPos = chars.length
-    let result = ''
-    for (let i = 0; i < len; i++) {
-      result += chars.charAt(Math.floor(Math.random() * maxPos))
-    }
+    inputs.name =
+      ensureString(inputs.functionName, { isOptional: true }) ||
+      this.state.functionName ||
+      `FlaskComponent_${random({ length: 6 })}`
+    inputs.codeUri = ensureString(inputs.code, { isOptional: true }) || process.cwd()
+    inputs.region = ensureString(inputs.region, { default: 'ap-guangzhou' })
+    inputs.include = ensureIterable(inputs.include, { default: [], ensureItem: ensureString })
+    inputs.exclude = ensureIterable(inputs.exclude, { default: [], ensureItem: ensureString })
+    inputs.apigatewayConf = ensurePlainObject(inputs.apigatewayConf, { default: {} })
 
     const shimsDir = path.join(__dirname, 'shims')
     inputs.include = [
       path.join(shimsDir, 'severless_wsgi.py'),
       path.join(shimsDir, 'api_service.py')
     ]
-    inputs.exclude = inputs.exclude || ['.git/**', '.gitignore', '.serverless', '.DS_Store']
-    inputs.handler = inputs.handler || DEFAULTS.handler
-    inputs.runtime = inputs.runtime || DEFAULTS.runtime
-    inputs.name = inputs.functionName || 'FlaskComponent_' + result
-    inputs.codeUri = inputs.codeUri || process.cwd()
+    inputs.exclude.push('.git/**', '.gitignore', '.serverless', '.DS_Store')
+
+    inputs.handler = ensureString(inputs.handler, { default: DEFAULTS.handler })
+    inputs.runtime = ensureString(inputs.runtime, { default: DEFAULTS.runtime })
+    inputs.apigatewayConf = ensurePlainObject(inputs.apigatewayConf, { default: {} })
 
     const appFile = path.join(path.resolve(inputs.codeUri), 'app.py')
-
     if (!(await utils.fileExists(appFile))) {
       throw new Error(`app.py not found in ${inputs.codeUri}`)
     }
@@ -48,9 +60,8 @@ class TencentFlask extends Component {
         inputs.vpcConfig = inputs.functionConf.vpcConfig
       }
     }
-    if (!inputs.requirements) {
-      inputs.requirements = {}
-    }
+
+    inputs.requirements = ensurePlainObject(inputs.apigatewayConf, { default: {} })
     inputs.requirements.include = inputs.include
     inputs.requirements.runtime = inputs.runtime.toLowerCase()
     inputs.requirements.codeUri = inputs.codeUri
@@ -78,10 +89,7 @@ class TencentFlask extends Component {
       description: 'Serverless Framework tencent-flask Component',
       serviceId: inputs.serviceId,
       region: inputs.region,
-      protocol:
-        inputs.apigatewayConf && inputs.apigatewayConf.protocol
-          ? inputs.apigatewayConf.protocol
-          : 'http',
+      protocols: inputs.apigatewayConf.protocols || ['http'],
       environment:
         inputs.apigatewayConf && inputs.apigatewayConf.environment
           ? inputs.apigatewayConf.environment
@@ -110,7 +118,9 @@ class TencentFlask extends Component {
       region: inputs.region,
       functionName: inputs.name,
       apiGatewayServiceId: tencentApiGatewayOutputs.serviceId,
-      url: `${tencentApiGatewayOutputs.protocol}://${tencentApiGatewayOutputs.subDomain}/${tencentApiGatewayOutputs.environment}/`
+      url: `${this.getDefaultProtocol(tencentApiGatewayOutputs.protocols)}://${
+        tencentApiGatewayOutputs.subDomain
+      }/${tencentApiGatewayOutputs.environment}/`
     }
 
     await this.save()

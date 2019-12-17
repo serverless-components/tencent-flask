@@ -15,6 +15,7 @@
   ],
   "scripts": {
     "commitlint": "commitlint -f HEAD@{15}",
+    "test": "tape *.test.js",
     "lint": "eslint --ext .js,.ts,.tsx .",
     "lint:fix": "eslint --fix --ext .js,.ts,.tsx .",
     "prettier": "prettier --check **/*.{css,html,js,json,md,yaml,yml}",
@@ -46,10 +47,12 @@
     }
   },
   "dependencies": {
-    "@serverless/core": "^1.0.0",
-    "@serverless/tencent-apigateway": "^1.2.0",
-    "@serverless/tencent-scf": "^1.1.0",
-    "@yugasun/python-requirements": "^0.1.1"
+    "@serverless/core": "^1.1.1",
+    "@serverless/tencent-apigateway": "^2.0.0",
+    "@serverless/tencent-scf": "^2.0.1",
+    "@yugasun/python-requirements": "^0.1.2",
+    "ext": "^1.4.0",
+    "type": "^2.0.0"
   },
   "devDependencies": {
     "@commitlint/cli": "^8.2.0",
@@ -63,6 +66,7 @@
     "husky": "^3.1.0",
     "lint-staged": "^9.5.0",
     "prettier": "^1.15.3",
-    "standard-version": "^7.0.1"
+    "standard-version": "^7.0.1",
+    "tape": "^4.12.0"
   }
 }
