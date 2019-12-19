@@ -121,7 +121,7 @@ def handle_request(app, event, context):
         body = event[u"body"] or ""
     else:
         body = ""
-        
+
     if event.get("isBase64Encoded", False):
         body = base64.b64decode(body)
     if isinstance(body, string_types):

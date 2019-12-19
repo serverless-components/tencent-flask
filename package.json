@@ -1,7 +1,7 @@
 {
   "name": "@serverless/tencent-flask",
   "description": "Tencent Cloud Flask Serverless Component",
-  "version": "0.0.0",
+  "version": "0.1.1-alpha.0",
   "main": "serverless.js",
   "publishConfig": {
     "access": "public"
@@ -20,7 +20,7 @@
     "lint:fix": "eslint --fix --ext .js,.ts,.tsx .",
     "prettier": "prettier --check **/*.{css,html,js,json,md,yaml,yml}",
     "prettier:fix": "prettier --write **/*.{css,html,js,json,md,yaml,yml}",
-    "prepare-release": "standard-version && prettier --write CHANGELOG.md"
+    "release": "standard-version"
   },
   "author": "Tencent Cloud, Inc.",
   "license": "Apache",
@@ -42,7 +42,6 @@
   },
   "standard-version": {
     "skip": {
-      "commit": true,
       "tag": true
     }
   },
