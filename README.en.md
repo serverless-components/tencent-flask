@@ -4,7 +4,7 @@
 
 ## Introduction
 
-Flask Serverless Component for Tencent Cloud, support Restful API deploy, not supportting Flask command.
+Tencent [Flask](https://github.com/pallets/flask) Serverless Component, support Restful API deploy, not supportting Flask command.
 
 ## Content
 

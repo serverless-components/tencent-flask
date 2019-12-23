@@ -23,7 +23,7 @@
     "release": "standard-version"
   },
   "author": "Tencent Cloud, Inc.",
-  "license": "Apache",
+  "license": "Apache-2.0",
   "husky": {
     "hooks": {
       "pre-commit": "lint-staged",
@@ -67,5 +67,17 @@
     "prettier": "^1.15.3",
     "standard-version": "^7.0.1",
     "tape": "^4.12.0"
-  }
+  },
+  "directories": {
+    "doc": "docs",
+    "example": "example"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/serverless-components/tencent-flask.git"
+  },
+  "bugs": {
+    "url": "https://github.com/serverless-components/tencent-flask/issues"
+  },
+  "homepage": "https://github.com/serverless-components/tencent-flask#readme"
 }

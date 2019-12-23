@@ -4,7 +4,7 @@
 
 ## 简介
 
-腾讯云 Flask Serverless Component, 支持 Restful API 服务的部署，不支持 Flask Command.
+腾讯云 [Flask](https://github.com/pallets/flask) Serverless Component, 支持 Restful API 服务的部署，不支持 Flask Command.
 
 ## 目录
 
@@ -63,7 +63,7 @@ MyComponent:
       environment: release
 ```
 
-- [更多配置](./docs/configure.md)
+- [更多配置](https://github.com/serverless-components/tencent-flask/tree/master/docs/configure.md)
 
 ### 3. 部署
 
