@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [0.1.2](https://github.com/serverless-components/tencent-flask/compare/v0.1.1...v0.1.2) (2019-12-24)
+
+
+### Features
+
+* add state for component ([38a39a2](https://github.com/serverless-components/tencent-flask/commit/38a39a29e044a196971ca276579d63d0d1565eaa))
+
 ### 0.1.1 (2019-12-23)
 
 
