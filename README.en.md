@@ -1,6 +1,6 @@
 # Tencent Flask Serverless Component
 
-[简体中文](./README.md) | English
+[简体中文](https://github.com/serverless-components/tencent-flask/blob/master/README.md) | English
 
 ## Introduction
 
@@ -17,11 +17,31 @@ Tencent [Flask](https://github.com/pallets/flask) Serverless Component, support 
 
 ### 0. Prepare
 
-Before using this component, you need add `Flask` and  `werkzeug` for your requirements. Like below:
+Before using this component, you need create a flask project, then add `Flask` and  `werkzeug` for your requirements. Like below:
 
 ```txt
 Flask==1.0.2
 werkzeug==0.16.0
+```
+
+Then create your API service entry file `app.py`, below is a example:
+
+```python
+from flask import Flask, jsonify
+app = Flask(__name__)
+
+@app.route("/")
+def index():
+    return "Hello Flash"
+
+@app.route("/users")
+def users():
+    users = [{'name': 'test1'}, {'name': 'test2'}]
+    return jsonify(data=users)
+
+@app.route("/users/<id>")
+def user(id):
+    return jsonify(data={'name': 'test1'})
 ```
 
 ### 1. Install
@@ -76,7 +96,7 @@ MyComponent:
       environment: release
 ```
 
-- [More Options](./docs/configure.md)
+- [More Options](https://github.com/serverless-components/tencent-flask/blob/master/docs/configure.md)
 
 ### 4. Deploy
 

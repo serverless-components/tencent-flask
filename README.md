@@ -1,6 +1,6 @@
 # 腾讯云 Flask Serverless Component
 
-简体中文 | [English](./README.en.md)
+简体中文 | [English](https://github.com/serverless-components/tencent-flask/blob/master/README.en.md)
 
 ## 简介
 
@@ -15,13 +15,33 @@
 4. [移除](#4-移除)
 
 
-### 0. 准备
+### 0. 准备 `
 
-在使用此组件之前，需要将 `Flask` 和 `werkzeug` 添加到依赖文件 `requiements.txt` 中，比如：
+在使用此组件之前，需要先初始化一个 Flask 项目，然后将 `Flask` 和 `werkzeug` 添加到依赖文件 `requiements.txt` 中，如下：
 
 ```txt
 Flask==1.0.2
 werkzeug==0.16.0
+```
+
+同时新增 API 服务 `app.py`，下面代码仅供参考:
+
+```python
+from flask import Flask, jsonify
+app = Flask(__name__)
+
+@app.route("/")
+def index():
+    return "Hello Flash"
+
+@app.route("/users")
+def users():
+    users = [{'name': 'test1'}, {'name': 'test2'}]
+    return jsonify(data=users)
+
+@app.route("/users/<id>")
+def user(id):
+    return jsonify(data={'name': 'test1'})
 ```
 
 ### 1. 安装
@@ -63,7 +83,7 @@ MyComponent:
       environment: release
 ```
 
-- [更多配置](https://github.com/serverless-components/tencent-flask/tree/master/docs/configure.md)
+- [更多配置](https://github.com/serverless-components/tencent-flask/blob/master/docs/configure.md)
 
 ### 3. 部署
 
