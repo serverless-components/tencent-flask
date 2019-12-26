@@ -1,3 +1,5 @@
+[![Serverless Python Flask Tencent Cloud](https://img.serverlesscloud.cn/20191226/1577347052683-flask_%E9%95%BF.png)](http://serverless.com)
+
 # Tencent Flask Serverless Component
 
 [简体中文](https://github.com/serverless-components/tencent-flask/blob/master/README.md) | English
