@@ -1,7 +1,7 @@
 {
   "name": "@serverless/tencent-flask",
   "description": "Tencent Cloud Flask Serverless Component",
-  "version": "0.1.3",
+  "version": "0.1.4",
   "main": "serverless.js",
   "publishConfig": {
     "access": "public"
@@ -31,13 +31,13 @@
     }
   },
   "lint-staged": {
-    "**/*.*": [
+    "**/*.{js,ts,tsx}": [
       "eslint --fix --ext .js,.ts,.tsx .",
-      "git add"
+      "git add ."
     ],
     "**/*.{css,html,js,json,md,yaml,yml}": [
-      "prettier -c",
-      "git add"
+      "npm run prettier:fix",
+      "git add ."
     ]
   },
   "standard-version": {
@@ -48,7 +48,7 @@
   "dependencies": {
     "@serverless/core": "^1.1.1",
     "@serverless/tencent-apigateway": "^2.0.0",
-    "@serverless/tencent-scf": "^2.0.1",
+    "@serverless/tencent-scf": "^2.0.2",
     "@yugasun/python-requirements": "^0.1.2",
     "ext": "^1.4.0",
     "type": "^2.0.0"
