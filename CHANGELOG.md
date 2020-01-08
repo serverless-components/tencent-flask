@@ -2,6 +2,14 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [0.1.7](https://github.com/serverless-components/tencent-flask/compare/v0.1.6...v0.1.7) (2020-01-08)
+
+
+### Bug Fixes
+
+* example yml ([75a8132](https://github.com/serverless-components/tencent-flask/commit/75a8132c5c5ef601772506b7e23d94c7e0ed766e))
+* readme ([b9f8d4b](https://github.com/serverless-components/tencent-flask/commit/b9f8d4b22eda166d445fa477866bc9ddbaf4bc47))
+
 ### [0.1.6](https://github.com/serverless-components/tencent-flask/compare/v0.1.5...v0.1.6) (2019-12-30)
 
 ### [0.1.5](https://github.com/serverless-components/tencent-flask/compare/v0.1.3...v0.1.5) (2019-12-30)
