@@ -2,6 +2,14 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [0.1.9](https://github.com/serverless-components/tencent-flask/compare/v0.1.7...v0.1.9) (2020-02-04)
+
+
+### Bug Fixes
+
+* flash -> flask ([355e2ac](https://github.com/serverless-components/tencent-flask/commit/355e2ac7b164b6f0bd2d5277e327c48c7791b095))
+* remove unuse dependencies ([5164272](https://github.com/serverless-components/tencent-flask/commit/51642722207908b77bf0243a7fac9f934925123a))
+
 ### [0.1.7](https://github.com/serverless-components/tencent-flask/compare/v0.1.6...v0.1.7) (2020-01-08)
 
 
