@@ -83,6 +83,7 @@ class TencentFlask extends Component {
     const tencentCloudFunction = await this.load('@serverless/tencent-scf')
     const tencentApiGateway = await this.load('@serverless/tencent-apigateway')
 
+    inputs.fromClientRemark = inputs.fromClientRemark || 'tencent-flask'
     const tencentCloudFunctionOutputs = await tencentCloudFunction(inputs)
     const apigwParam = {
       serviceName: inputs.serviceName,
@@ -113,6 +114,7 @@ class TencentFlask extends Component {
       apigwParam.endpoints[0].auth = inputs.apigatewayConf.auth
     }
 
+    apigwParam.fromClientRemark = inputs.fromClientRemark || 'tencent-flask'
     const tencentApiGatewayOutputs = await tencentApiGateway(apigwParam)
     const outputs = {
       region: inputs.region,
@@ -130,12 +132,15 @@ class TencentFlask extends Component {
     return outputs
   }
 
-  async remove() {
+  async remove(inputs = {}) {
+    const removeInput = {
+      fromClientRemark: inputs.fromClientRemark || 'tencent-flask'
+    }
     const tencentCloudFunction = await this.load('@serverless/tencent-scf')
     const tencentApiGateway = await this.load('@serverless/tencent-apigateway')
 
-    await tencentCloudFunction.remove()
-    await tencentApiGateway.remove()
+    await tencentCloudFunction.remove(removeInput)
+    await tencentApiGateway.remove(removeInput)
 
     return {}
   }
