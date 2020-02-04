@@ -12,14 +12,14 @@ Tencent [Flask](https://github.com/pallets/flask) Serverless Component, support 
 
 1. [Prepare](#0-prepare)
 1. [Install](#1-install)
-2. [Create](#2-create)
-3. [Configure](#3-configure)
-4. [Deploy](#4-deploy)
-5. [Remove](#5-Remove)
+1. [Create](#2-create)
+1. [Configure](#3-configure)
+1. [Deploy](#4-deploy)
+1. [Remove](#5-Remove)
 
 ### 0. Prepare
 
-Before using this component, you need create a flask project, then add `Flask` and  `werkzeug` for your requirements. Like below:
+Before using this component, you need create a flask project, then add `Flask` and `werkzeug` in `requirements.txt`. Like below:
 
 ```txt
 Flask==1.0.2
@@ -79,9 +79,9 @@ TENCENT_SECRET_KEY=XXX
 # serverless.yml
 
 MyComponent:
-  component: "@serverless/tencent-flask"
+  component: '@serverless/tencent-flask'
   inputs:
-    region: ap-guangzhou 
+    region: ap-guangzhou
     functionName: flask-function
     code: ./
     functionConf:
