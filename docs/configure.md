@@ -26,7 +26,9 @@ express:
         subnetId: ''
         vpcId: ''
     apigatewayConf:
-      protocol: https
+      protocol:
+        - http
+        - https
       environment: test
       usagePlan:
         usagePlanId: 1111
