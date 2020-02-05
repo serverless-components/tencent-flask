@@ -82,7 +82,8 @@ MyComponent:
         subnetId: ''
         vpcId: ''
     apigatewayConf:
-      protocol: https
+      protocols:
+        - https
       environment: release
 ```
 
