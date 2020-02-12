@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [0.1.10](https://github.com/serverless-components/tencent-flask/compare/v0.1.9...v0.1.10) (2020-02-12)
+
+
+### Bug Fixes
+
+* get request query bug ([bdc2f6f](https://github.com/serverless-components/tencent-flask/commit/bdc2f6fcf93fb453724e5adf6ff2007139ca2224))
+
 ### [0.1.9](https://github.com/serverless-components/tencent-flask/compare/v0.1.7...v0.1.9) (2020-02-04)
 
 
