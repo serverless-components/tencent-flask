@@ -80,7 +80,7 @@ def encode_query_string(event):
     if multi:
         return url_encode(MultiDict((i, j) for i in multi for j in multi[i]))
     else:
-        return url_encode(event.get(u"queryStringParameters") or {})
+        return url_encode(event.get(u"queryString") or {})
 
 
 def handle_request(app, event, context):
