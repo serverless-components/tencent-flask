@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [0.2.0](https://github.com/serverless-components/tencent-flask/compare/v0.1.10...v0.2.0) (2020-02-18)
+
+
+### Features
+
+* update dependency apigw for supporting custom domain ([22b51d8](https://github.com/serverless-components/tencent-flask/commit/22b51d8be703bc9dd2756be6b755d9fb3c270520))
+
 ### [0.1.10](https://github.com/serverless-components/tencent-flask/compare/v0.1.9...v0.1.10) (2020-02-12)
 
 
