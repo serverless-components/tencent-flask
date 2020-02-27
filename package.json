@@ -47,8 +47,8 @@
   },
   "dependencies": {
     "@serverless/core": "^1.1.1",
-    "@serverless/tencent-apigateway": "^2.1.1",
-    "@serverless/tencent-scf": "^2.0.12",
+    "@serverless/tencent-apigateway": "^2.1.2",
+    "@serverless/tencent-scf": "^2.1.1",
     "@yugasun/python-requirements": "^0.1.2",
     "ext": "^1.4.0",
     "type": "^2.0.0"
