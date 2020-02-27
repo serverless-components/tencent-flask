@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [0.2.1](https://github.com/serverless-components/tencent-flask/compare/v0.2.0...v0.2.1) (2020-02-27)
+
+
+### Bug Fixes
+
+* upgrade tencent-scf supporting upload bar ([4e2cd48](https://github.com/serverless-components/tencent-flask/commit/4e2cd48fc1e1a85d7387a6847f3f94dee433443f))
+
 ## [0.2.0](https://github.com/serverless-components/tencent-flask/compare/v0.1.10...v0.2.0) (2020-02-18)
 
 
