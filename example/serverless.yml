@@ -1,6 +1,5 @@
 MyFlask:
-  # component: '@serverless/tencent-flask'
-  component: ../
+  component: '@serverless/tencent-flask'
   inputs:
     region: ap-guangzhou
     functionName: flask-function
