@@ -1,8 +1,10 @@
 MyFlask:
-  component: '@serverless/tencent-flask'
+  # component: '@serverless/tencent-flask'
+  component: ../
   inputs:
     region: ap-guangzhou
     functionName: flask-function
+    namespace: test
     code: ./
     functionConf:
       timeout: 10
