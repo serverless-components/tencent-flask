@@ -3,6 +3,7 @@ MyFlask:
   inputs:
     region: ap-guangzhou
     functionName: flask-function
+    namespace: test
     code: ./
     functionConf:
       timeout: 10

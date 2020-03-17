@@ -2,6 +2,42 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [0.2.2](https://github.com/serverless-components/tencent-flask/compare/v0.2.1...v0.2.2) (2020-03-12)
+
+
+### Bug Fixes
+
+* apigw namespace ([98a3778](https://github.com/serverless-components/tencent-flask/commit/98a377834fcc556da7c6e304befe438a9c4bd23f))
+
+### [0.2.1](https://github.com/serverless-components/tencent-flask/compare/v0.2.0...v0.2.1) (2020-02-27)
+
+
+### Bug Fixes
+
+* upgrade tencent-scf supporting upload bar ([4e2cd48](https://github.com/serverless-components/tencent-flask/commit/4e2cd48fc1e1a85d7387a6847f3f94dee433443f))
+
+## [0.2.0](https://github.com/serverless-components/tencent-flask/compare/v0.1.10...v0.2.0) (2020-02-18)
+
+
+### Features
+
+* update dependency apigw for supporting custom domain ([22b51d8](https://github.com/serverless-components/tencent-flask/commit/22b51d8be703bc9dd2756be6b755d9fb3c270520))
+
+### [0.1.10](https://github.com/serverless-components/tencent-flask/compare/v0.1.9...v0.1.10) (2020-02-12)
+
+
+### Bug Fixes
+
+* get request query bug ([bdc2f6f](https://github.com/serverless-components/tencent-flask/commit/bdc2f6fcf93fb453724e5adf6ff2007139ca2224))
+
+### [0.1.9](https://github.com/serverless-components/tencent-flask/compare/v0.1.7...v0.1.9) (2020-02-04)
+
+
+### Bug Fixes
+
+* flash -> flask ([355e2ac](https://github.com/serverless-components/tencent-flask/commit/355e2ac7b164b6f0bd2d5277e327c48c7791b095))
+* remove unuse dependencies ([5164272](https://github.com/serverless-components/tencent-flask/commit/51642722207908b77bf0243a7fac9f934925123a))
+
 ### [0.1.7](https://github.com/serverless-components/tencent-flask/compare/v0.1.6...v0.1.7) (2020-01-08)
 
 

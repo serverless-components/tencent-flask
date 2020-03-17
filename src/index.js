@@ -18,6 +18,7 @@ class TencentFlask extends Component {
 
   async default(inputs = {}) {
     const appFile = path.join(path.resolve(inputs.code), 'app.py')
+
     if (!(await utils.fileExists(appFile))) {
       throw new Error(`app.py not found in ${inputs.code}`)
     }
