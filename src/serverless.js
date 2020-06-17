@@ -140,7 +140,7 @@ class ServerlessComponent extends Component {
   }
 
   async deploy(inputs) {
-    console.log(`Deploying ${CONFIGS.frameworkFullname} App...`)
+    console.log(`Deploying ${CONFIGS.compNameFullname} App...`)
 
     const credentials = this.getCredentials()
 
@@ -190,7 +190,7 @@ class ServerlessComponent extends Component {
   }
 
   async remove() {
-    console.log(`Removing ${CONFIGS.frameworkFullname} App...`)
+    console.log(`Removing ${CONFIGS.compNameFullname} App...`)
 
     const { state } = this
     const { regionList = [] } = state
