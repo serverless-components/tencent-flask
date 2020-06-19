@@ -2,7 +2,7 @@
 
 # 腾讯云 Flask Serverless Component
 
-简体中文 | [English](https://github.com/serverless-components/tencent-flask/blob/master/README.en.md)
+简体中文 | [English](./README.en.md)
 
 ## 简介
 
@@ -18,7 +18,7 @@
 1. [部署](#3-部署)
 1. [移除](#4-移除)
 
-### 0. 准备 `
+### 0. 准备
 
 在使用此组件之前，需要先初始化一个 Flask 项目，然后将 `Flask` 和 `werkzeug` 添加到依赖文件 `requirements.txt` 中，如下：
 
@@ -66,28 +66,28 @@ $ touch serverless.yml
 ```yml
 # serverless.yml
 
-MyComponent:
-  component: '@serverless/tencent-flask'
-  inputs:
-    region: ap-guangzhou
-    functionName: flask-function
-    code: ./
-    functionConf:
-      timeout: 10
-      memorySize: 128
-      environment:
-        variables:
-          TEST: vale
-      vpcConfig:
-        subnetId: ''
-        vpcId: ''
-    apigatewayConf:
-      protocols:
-        - https
-      environment: release
+component: flask 
+name: flashDemo
+org: orgDemo
+app: appDemo 
+stage: dev 
+
+inputs:
+  src:
+    hook: 'pip install -r requirements.txt -t ./'
+    dist: ./
+    exclude:
+      - .env
+  region: ap-guangzhou
+  runtime: Python3.6
+  apigatewayConf:
+    protocols:
+      - http
+      - https
+    environment: release
 ```
 
-- [更多配置](https://github.com/serverless-components/tencent-flask/blob/master/docs/configure.md)
+- [更多配置](./docs/configure.md)
 
 ### 3. 部署
 
@@ -129,4 +129,4 @@ TENCENT_SECRET_KEY=123
 
 ### 更多组件
 
-可以在 [Serverless Components](https://github.com/serverless/components) repo 中查询更多组件的信息。
+可以在 [Serverless Components](https://github.com/serverless/components/blob/master/README.cn.md) repo 中查询更多组件的信息。

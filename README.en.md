@@ -2,7 +2,7 @@
 
 # Tencent Flask Serverless Component
 
-[简体中文](https://github.com/serverless-components/tencent-flask/blob/master/README.md) | English
+[简体中文](./README.md) | English
 
 ## Introduction
 
@@ -78,28 +78,28 @@ TENCENT_SECRET_KEY=XXX
 ```yml
 # serverless.yml
 
-MyComponent:
-  component: '@serverless/tencent-flask'
-  inputs:
-    region: ap-guangzhou
-    functionName: flask-function
-    code: ./
-    functionConf:
-      timeout: 10
-      memorySize: 128
-      environment:
-        variables:
-          TEST: vale
-      vpcConfig:
-        subnetId: ''
-        vpcId: ''
-    apigatewayConf:
-      protocols:
-        - https
-      environment: release
+component: flask
+name: flashDemo
+org: orgDemo
+app: appDemo
+stage: dev
+
+inputs:
+  src:
+    hook: 'pip install -r requirements.txt -t ./'
+    dist: ./
+    exclude:
+      - .env
+  region: ap-guangzhou
+  runtime: Python3.6
+  apigatewayConf:
+    protocols:
+      - http
+      - https
+    environment: release
 ```
 
-- [More Options](https://github.com/serverless-components/tencent-flask/blob/master/docs/configure.md)
+- [More Options](./docs/configure.md))
 
 ### 4. Deploy
 
