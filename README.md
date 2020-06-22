@@ -66,11 +66,11 @@ $ touch serverless.yml
 ```yml
 # serverless.yml
 
-component: flask 
+component: flask
 name: flashDemo
 org: orgDemo
-app: appDemo 
-stage: dev 
+app: appDemo
+stage: dev
 
 inputs:
   src:

@@ -1,5 +1,5 @@
 name: flask
-version: dev
+version: 0.0.1
 author: Tencent Cloud, Inc
 org: Tencent Cloud, Inc
 description: Deploys a serverless Flask application onto Tencent SCF and Tencent APIGateway.

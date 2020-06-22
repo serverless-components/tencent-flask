@@ -6,6 +6,7 @@ name: flashDemo # (required) name of your flash component instance.
 
 inputs:
   src:
+    # TODO: 安装python项目依赖到项目当前目录
     hook: 'pip3 install -r requirements.txt -t ./'
     dist: ./ # (optional) path to the source folder. default is a hello world app.
     exclude:
