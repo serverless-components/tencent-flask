@@ -4,7 +4,7 @@ app = Flask(__name__)
 
 @app.route("/")
 def index():
-    return "Hello Flask"
+    return "Flask Restful API Created By Serverless Component"
 
 
 @app.route("/users")
