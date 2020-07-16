@@ -8,3 +8,4 @@ repo: https://github.com/serverless-components/tencent-flask
 readme: https://github.com/serverless-components/tencent-flask/tree/master/README.md
 license: MIT
 main: ./src
+webDeployable: true
