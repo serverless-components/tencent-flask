@@ -2,7 +2,7 @@ name: flask
 version: 0.0.2
 author: Tencent Cloud, Inc
 org: Tencent Cloud, Inc
-description: Deploy a serverless Flask application onto Tencent SCF and APIGateway.
+description: Deploy a serverless Flask application onto Tencent SCF and API Gateway.
 keywords: tencent, serverless, flask
 repo: https://github.com/serverless-components/tencent-flask
 readme: https://github.com/serverless-components/tencent-flask/tree/master/README.md
