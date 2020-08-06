@@ -4,7 +4,6 @@ const CONFIGS = {
   compFullname: 'Flask',
   handler: 'sl_handler.handler',
   runtime: 'Python3.6',
-  exclude: ['.git/**', '.gitignore', '.DS_Store'],
   timeout: 3,
   memorySize: 128,
   namespace: 'default',
