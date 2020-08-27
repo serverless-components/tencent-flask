@@ -7,7 +7,7 @@ jest.setTimeout(300000)
 const instanceYaml = {
   org: 'orgDemo',
   app: 'appDemo',
-  component: 'flask@dev',
+  component: 'flask',
   name: `flask-integration-tests-${generateId()}`,
   stage: 'dev',
   inputs: {
