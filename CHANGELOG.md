@@ -1,3 +1,10 @@
+## [0.0.7](https://github.com/serverless-components/tencent-flask/compare/v0.0.6...v0.0.7) (2020-09-02)
+
+
+### Bug Fixes
+
+* update tencnet-component-toolkit for api mark ([86e5a49](https://github.com/serverless-components/tencent-flask/commit/86e5a498820c8f0312405593033fa9b0590f1478))
+
 ## [0.0.6](https://github.com/serverless-components/tencent-flask/compare/v0.0.5...v0.0.6) (2020-09-02)
 
 
