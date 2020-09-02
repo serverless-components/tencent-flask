@@ -2,8 +2,6 @@
 
 # 腾讯云 Flask Serverless Component
 
-简体中文 | [English](https://github.com/serverless-components/tencent-flask/tree/master/README.en.md)
-
 ## 简介
 
 腾讯云 [Flask](https://github.com/pallets/flask) Serverless Component, 支持 Restful API 服务的部署，不支持 Flask Command.
