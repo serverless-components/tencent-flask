@@ -1,3 +1,10 @@
+## [0.0.6](https://github.com/serverless-components/tencent-flask/compare/v0.0.5...v0.0.6) (2020-09-02)
+
+
+### Bug Fixes
+
+* support cfs config ([27f4374](https://github.com/serverless-components/tencent-flask/commit/27f437462b664930fd0483119d414705b660071b))
+
 ## [0.0.5](https://github.com/serverless-components/tencent-flask/compare/v0.0.4...v0.0.5) (2020-08-26)
 
 
