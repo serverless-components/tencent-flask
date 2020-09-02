@@ -2,7 +2,7 @@
 
 # 腾讯云 Flask Serverless Component
 
-简体中文 | [English](./README.en.md)
+简体中文 | [English](https://github.com/serverless-components/tencent-flask/tree/master/README.en.md)
 
 ## 简介
 
@@ -51,7 +51,7 @@ def user(id):
 
 通过 npm 全局安装 [serverless cli](https://github.com/serverless/serverless)
 
-```shell
+```bash
 $ npm install -g serverless
 ```
 
@@ -59,7 +59,7 @@ $ npm install -g serverless
 
 本地创建 `serverless.yml` 文件，在其中进行如下配置
 
-```shell
+```bash
 $ touch serverless.yml
 ```
 
@@ -87,7 +87,7 @@ inputs:
     environment: release
 ```
 
-- [更多配置](./docs/configure.md)
+- [更多配置](https://github.com/serverless-components/tencent-flask/tree/master/docs/configure.md)
 
 ### 3. 部署
 
@@ -95,7 +95,7 @@ inputs:
 
 通过 `sls` 命令进行部署，并可以添加 `--debug` 参数查看部署过程中的信息
 
-```shell
+```bash
 $ sls --debug
 ```
 
@@ -103,7 +103,7 @@ $ sls --debug
 
 通过以下命令移除部署的 API 网关
 
-```shell
+```bash
 $ sls remove --debug
 ```
 
@@ -111,7 +111,7 @@ $ sls remove --debug
 
 当前默认支持 CLI 扫描二维码登录，如您希望配置持久的环境变量/秘钥信息，也可以本地创建 `.env` 文件
 
-```shell
+```bash
 $ touch .env # 腾讯云的配置信息
 ```
 
@@ -130,3 +130,9 @@ TENCENT_SECRET_KEY=123
 ### 更多组件
 
 可以在 [Serverless Components](https://github.com/serverless/components/blob/master/README.cn.md) repo 中查询更多组件的信息。
+
+## License
+
+MIT License
+
+Copyright (c) 2020 Tencent Cloud, Inc.
