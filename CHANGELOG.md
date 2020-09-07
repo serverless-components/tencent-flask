@@ -1,3 +1,11 @@
+## [0.0.8](https://github.com/serverless-components/tencent-flask/compare/v0.0.7...v0.0.8) (2020-09-07)
+
+
+### Bug Fixes
+
+* update deploy flow for multi region ([fe034d1](https://github.com/serverless-components/tencent-flask/commit/fe034d170e434f9b3ac31c1b495957e6f5bf3f3e))
+* update deps ([821f3e6](https://github.com/serverless-components/tencent-flask/commit/821f3e65312332335eb804caefdc8fd928b618aa))
+
 ## [0.0.7](https://github.com/serverless-components/tencent-flask/compare/v0.0.6...v0.0.7) (2020-09-02)
 
 
