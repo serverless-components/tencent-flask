@@ -1,3 +1,10 @@
+## [0.0.9](https://github.com/serverless-components/tencent-flask/compare/v0.0.8...v0.0.9) (2020-12-15)
+
+
+### Bug Fixes
+
+* update deploy and remove flow ([#14](https://github.com/serverless-components/tencent-flask/issues/14)) ([4b3c40c](https://github.com/serverless-components/tencent-flask/commit/4b3c40cb9e9f5f586a9d781cbae523112dfdebc0))
+
 ## [0.0.8](https://github.com/serverless-components/tencent-flask/compare/v0.0.7...v0.0.8) (2020-09-07)
 
 
