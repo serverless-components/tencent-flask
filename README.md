@@ -72,7 +72,7 @@ stage: dev
 
 inputs:
   src:
-    hook: 'pip install -r requirements.txt -t ./'
+    hook: 'pip3 install -r requirements.txt -t ./'
     dist: ./
     exclude:
       - .env
