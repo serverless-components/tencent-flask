@@ -1,3 +1,4 @@
+import os
 from flask import Flask, jsonify
 app = Flask(__name__)
 
@@ -16,3 +17,7 @@ def users():
 @app.route("/users/<id>")
 def user(id):
     return jsonify(data={'name': 'test1'})
+
+isLocal = os.getenv('ENV') == 'local'
+if isLocal:
+  app.run(host='0.0.0.0',port=3000,debug=True)
