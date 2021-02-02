@@ -1,3 +1,10 @@
+## [0.0.10](https://github.com/serverless-components/tencent-flask/compare/v0.0.9...v0.0.10) (2021-02-02)
+
+
+### Bug Fixes
+
+* multi cookie bug ([97043cb](https://github.com/serverless-components/tencent-flask/commit/97043cb2d0a1d66d448f216309aac92289cc2e7d))
+
 ## [0.0.9](https://github.com/serverless-components/tencent-flask/compare/v0.0.8...v0.0.9) (2020-12-15)
 
 
